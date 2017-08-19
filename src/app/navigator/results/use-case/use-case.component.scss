@@ -166,3 +166,9 @@ li:after{
 .view-details-section {
   margin-top: 10px;
 }
+.multiline-ellipsis {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

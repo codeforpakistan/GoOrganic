@@ -4,25 +4,30 @@
       <span flex>
         <img src="../../../assets/images/cherry.png" height="80" width="80" style="float:left">
       </span>
-      <p flex style="font-size: 18px">abc plant</p>
+      <p flex style="font-size: 18px">{{usecaseObj.title}}</p>
     </span>
     <span layout="row">
-      <span flex>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+      <span flex class="multiline-ellipsis">
+        {{usecaseObj.description}}
       </span>
     </span>
     <span layout="row" style="margin-top: 10px">
       <span flex>
-          <strong>Posted By:</strong> John Doe
+          <strong>Posted By:</strong> {{usecaseObj.posted_by}}
       </span>
     </span>
     <span layout="row">
       <span flex>
-          <strong>Timeline available:</strong> Yes
+          <strong>Timeline available:</strong> {{usecaseObj.timeline_available}}
       </span>
     </span>
-    <span layout="row" class="view-details-section">
-      <button md-raised-button class="view-details-btn">View Details</button>
+    <span layout="row">
+      <span flex>
+          <strong>Price:</strong> {{usecaseObj.price}}
+      </span>
     </span>
+    <!--<span layout="row" class="view-details-section">
+      <button md-raised-button class="view-details-btn">View Details</button>
+    </span>-->
   </md-card-content>
 </md-card>
