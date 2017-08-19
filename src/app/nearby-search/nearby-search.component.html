@@ -1,66 +1,59 @@
-<md-card>
+<md-card class="search-width">
     <md-card-content>
         <div layout="row">
-            <div flex>
+            <div flex="90">
                 <td-chips [chipAddition]="chipAddition"
                     [chipRemoval]="chipRemoval"
                     [items]="filteredStrings"
                     [(ngModel)]="stringsModel"
-                    placeholder="Enter autocomplete strings"
+                    placeholder="Enter item name"
                     [disabled]="disabled"
                     (inputChange)="filterStrings($event)"
                     requireMatch>
                 </td-chips>
             </div>
+            <div flex="10" class="search-btn-area">
+                <button md-button class="search-btn" (click)="showResult = true"> Search </button>
+            </div>
         </div>
-        <div layout="row">
+        <div layout="row" *ngIf="showResult">
             <div flex>
-
                 <md-card layout="row">
                     <md-card-content flex>
-                        <div layout="row" >
-                            <div flex="10">
-                                <img class="thumb-grower-img" src="../../assets/images/male.png">
-                            </div>    
-                            <div flex="90">
-                                <div>
-                                    <strong>Grower Name:</strong>John Doe 
+                        <div layout="row">
+                            <div flex="40">
+                                <div layout="row">
+                                    <div flex="20">
+                                        <img class="thumb-grower-img" src="../../assets/images/male.png">
+                                    </div>    
+                                    <div flex="80">
+                                        <div>
+                                            <strong>Grower Name:</strong>John Doe 
+                                        </div>
+                                        <div>
+                                            <strong>Location:</strong>South Punjab, Abc  
+                                        </div>
+                                        <div>
+                                            <strong>Contact Number:</strong> 0333-5454980  
+                                        </div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <strong>Location:</strong>South Punjab, Abc  
-                                </div>
-                                <div>
-                                    <strong>Contact Number:</strong> 0333-5454980  
+                                <div layout="row" class="searched-item-imgs">
+                                    <img src="../../assets/images/map.gif">
                                 </div>
                             </div>
-                        </div>
-                        <div layout="row">
-                            <div flex>
-                                
-                                <div layout="row" class="searched-item">
-                                    <div flex>
+                            <div flex="60">
+                                <div layout="row">
+                                    <div flex="20">
+                                        <img class="thumb-grower-img" src="../../assets/images/tomato.jpg">
+                                    </div>
+                                    <div flex="80">
                                         <div layout="row">
-                                            <div flex>
-                                                <h2>Abc Tomato</h2>
+                                            <div flex="80">
+                                                <h3>Abc Tomato</h3>
                                             </div>
-                                        </div>
-                                        <div layout="row">
-                                            <div flex="20">
-                                                <img class="img-size" src="../../assets/images/tomato.png">
-                                            </div>
-                                            <div flex="20">
-                                                <img class="img-size" src="../../assets/images/tomato.png">
-                                            </div>
-                                            <div flex="20">
-                                                <img class="img-size" src="../../assets/images/tomato.png">
-                                            </div>
-                                            <div flex="20">
-                                                <img class="img-size" src="../../assets/images/tomato.png">
-                                            </div>
-                                        </div>
-                                        <div layout="row">
-                                            <div flex>
-                                                <h2>Growth Progress</h2>
+                                            <div flex="20" class="searched-item-days"> 
+                                                <span>3 days left</span>
                                             </div>
                                         </div>
                                         <div layout="row">
@@ -68,7 +61,32 @@
                                                 class="example-margin"
                                                 [color]="color"
                                                 [mode]="mode"
-                                                [value]="value"
+                                                [value]="50"
+                                                [bufferValue]="bufferValue">
+                                            </md-progress-bar>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div layout="row">
+                                    <div flex="20">
+                                        <img class="thumb-grower-img" src="../../assets/images/cabbage.JPG">
+                                    </div>
+                                    <div flex="80">
+                                        <div layout="row">
+                                            <div flex="80">
+                                                <h3>Xyz Cabbage</h3>
+                                            </div>
+                                            <div flex="20" class="searched-item-days"> 
+                                                <span>4 days left</span>
+                                            </div>
+                                        </div>
+                                        <div layout="row">
+                                            <md-progress-bar
+                                                class="example-margin"
+                                                [color]="color"
+                                                [mode]="mode"
+                                                [value]="40"
                                                 [bufferValue]="bufferValue">
                                             </md-progress-bar>
                                         </div>

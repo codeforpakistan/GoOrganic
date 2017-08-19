@@ -13,18 +13,14 @@ export class NearBySearchComponent implements OnInit {
     chipRemoval: boolean = true;
 
     strings: string[] = [
-        'stepper',
-        'expansion-panel',
-        'markdown',
-        'highlight',
-        'loading',
-        'media',
-        'chips',
-        'http',
-        'json-formatter',
-        'pipes',
-        'need more?',
+        'Cabbage',
+        'Carrot',
+        'Mint',
+        'Onion',
+        'Tomato'
     ];
+
+    showResult: boolean = false;
 
     filteredStrings: string[];
 
@@ -47,27 +43,7 @@ export class NearBySearchComponent implements OnInit {
     }
 
 
-    // activeDeactiveStep1Msg: string = 'No select/deselect detected yet';
-    // stateStep2: StepState = StepState.Required;
-    // stateStep3: StepState = StepState.Complete;
-    
-    // toggleRequiredStep2(): void {
-    //     this.stateStep2 = (this.stateStep2 === StepState.Required ? StepState.None : StepState.Required);
-    // }
-
-    // toggleCompleteStep3(): void {
-    //     this.stateStep3 = (this.stateStep3 === StepState.Complete ? StepState.None : StepState.Complete);
-    // }
-
-    // activeStep1Event(): void {
-    //     this.activeDeactiveStep1Msg = 'Active event emitted.';
-    // }
-
-    // deactiveStep1Event(): void {
-    //     this.activeDeactiveStep1Msg = 'Deactive event emitted.';
-    // }
-
-    color = 'warn';
+    color = 'accent';
     mode = 'determinate';
     value = 50;
     bufferValue = 75;
