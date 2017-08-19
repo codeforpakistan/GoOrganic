@@ -50,6 +50,12 @@ import { LoaderService } from './navigator/shared/services/loader.service'
 import { DirCrudComponent } from './navigator/dir-crud/dir-crud.component';
 import { DimensionsListComponent } from './navigator/dir-crud/dimensions-list/dimensions-list.component';
 
+import { NearBySearchComponent } from './nearby-search/nearby-search.component';
+
+import { CovalentChipsModule } from '@covalent/core';
+
+import {MdProgressBarModule} from '@angular/material';
+
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
   SendRequestInterceptor
@@ -82,7 +88,8 @@ export function getAPI(): string {
     SocialCardComponent,
     MaturityScaleComponent,
     DirCrudComponent,
-    DimensionsListComponent
+    DimensionsListComponent,
+    NearBySearchComponent
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     AppRoutingModule,
@@ -101,7 +108,9 @@ export function getAPI(): string {
     CovalentHighlightModule,
     CovalentMarkdownModule,
     CovalentExpansionPanelModule,
-    CovalentMessageModule
+    CovalentMessageModule,
+    CovalentChipsModule,
+    MdProgressBarModule
   ], // modules needed to run this module
   providers: [
     httpInterceptorProviders,

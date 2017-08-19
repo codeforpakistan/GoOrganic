@@ -1,0 +1,84 @@
+<md-card>
+    <md-card-content>
+        <div layout="row">
+            <div flex>
+                <td-chips [chipAddition]="chipAddition"
+                    [chipRemoval]="chipRemoval"
+                    [items]="filteredStrings"
+                    [(ngModel)]="stringsModel"
+                    placeholder="Enter autocomplete strings"
+                    [disabled]="disabled"
+                    (inputChange)="filterStrings($event)"
+                    requireMatch>
+                </td-chips>
+            </div>
+        </div>
+        <div layout="row">
+            <div flex>
+
+                <md-card layout="row">
+                    <md-card-content flex>
+                        <div layout="row" >
+                            <div flex="10">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="90">
+                                <div>
+                                    <strong>Grower Name:</strong>John Doe 
+                                </div>
+                                <div>
+                                    <strong>Location:</strong>South Punjab, Abc  
+                                </div>
+                                <div>
+                                    <strong>Contact Number:</strong> 0333-5454980  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row">
+                            <div flex>
+                                
+                                <div layout="row" class="searched-item">
+                                    <div flex>
+                                        <div layout="row">
+                                            <div flex>
+                                                <h2>Abc Tomato</h2>
+                                            </div>
+                                        </div>
+                                        <div layout="row">
+                                            <div flex="20">
+                                                <img class="img-size" src="../../assets/images/tomato.png">
+                                            </div>
+                                            <div flex="20">
+                                                <img class="img-size" src="../../assets/images/tomato.png">
+                                            </div>
+                                            <div flex="20">
+                                                <img class="img-size" src="../../assets/images/tomato.png">
+                                            </div>
+                                            <div flex="20">
+                                                <img class="img-size" src="../../assets/images/tomato.png">
+                                            </div>
+                                        </div>
+                                        <div layout="row">
+                                            <div flex>
+                                                <h2>Growth Progress</h2>
+                                            </div>
+                                        </div>
+                                        <div layout="row">
+                                            <md-progress-bar
+                                                class="example-margin"
+                                                [color]="color"
+                                                [mode]="mode"
+                                                [value]="value"
+                                                [bufferValue]="bufferValue">
+                                            </md-progress-bar>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+        </div>
+    </md-card-content>
+</md-card>
