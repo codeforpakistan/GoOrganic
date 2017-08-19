@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MainComponent } from './main/main.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardProductComponent } from './dashboard-product/dashboard-product.component';
 import { ProductOverviewComponent } from './dashboard-product/overview/overview.component';
 import { ProductStatsComponent } from './dashboard-product/stats/stats.component';
@@ -33,10 +32,6 @@ const routes: Routes = [
         path: '',
         component: MainComponent,
         children: [
-            {
-                component: DashboardComponent,
-                path: '',
-            },
             {
                 path: 'product',
                 component: DashboardProductComponent,
@@ -100,7 +95,7 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routedComponents: any[] = [
     MainComponent, LoginComponent,
-    DashboardComponent, DashboardProductComponent,
+    DashboardProductComponent,
     FormComponent, LogsComponent, DetailComponent,
     FeaturesFormComponent, ProductFeaturesComponent, ProductOverviewComponent, ProductStatsComponent,
     NavigatorComponent
