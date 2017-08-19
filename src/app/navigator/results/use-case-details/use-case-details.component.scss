@@ -13,7 +13,7 @@
     padding-top: 10px;
 
     /deep/ button {
-        background-color: #039BE6; 
+        background-color: #6AA451; 
         color: white;
     }
 }
@@ -24,4 +24,19 @@
 .bvf-use-case-details-text {
     padding-top: 13px; 
     margin-right: 20px;
+}
+.img-size {
+    height: 40%;
+}
+.product-title {
+    font-size: 30px;
+}
+.sm-size {
+    height: 20%;
+}
+.thumb-image {
+    border: 1px #dedede solid;
+}
+.comments-section {
+    background-color: #6AA451;
 }

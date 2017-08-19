@@ -8,11 +8,94 @@
         </span>
     </div>
     <div layout="row" class="bvf-use-case-details-body">
-        <div flex="55">
-            <div class="bvf-use-case-details-text">{{usecase.usecaseParagraph}}<a *ngIf="usecase.usecaseDetailsUrl" style="color: #039BE6; padding-left: 4px" href="{{usecase.usecaseDetailsUrl}}" target="_blank">More details</a></div>
-        </div>
-        <div flex="45">
-            <use-case-owner [usecaseOwner]="usecase"></use-case-owner>
-        </div>
+        <md-tab-group>
+            <md-tab label="Product Details">
+                <div layout="row">
+                    <div flex="50">
+                        <img src="../../../../assets/images/cherry.png" width="60%">
+                        <div layout="row">
+                            <img class="thumb-image" src="../../../../assets/images/cherry.png" height="15%" width="15%">
+                            <img class="thumb-image" src="../../../../assets/images/cherry.png" height="15%" width="15%">
+                            <img class="thumb-image" src="../../../../assets/images/cherry.png" height="15%" width="15%">
+                            <img class="thumb-image" src="../../../../assets/images/cherry.png" height="15%" width="15%">
+                        </div>
+                        <div layout="row">
+                            <strong>Posted By: </strong> John Doe
+                        </div>
+                    </div>
+                    <div flex="50">
+                        <div layout="row" class="product-title">
+                            abc plant
+                        </div>
+                        <div layout="row">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
+                        <div layout="row">
+                            <span><strong>Price: </strong> 750 </span>
+                        </div>
+                        <div layout="row">
+                            <div flex>
+                                <div layout="row">
+                                    <span><strong>Categories: </strong> category 1</span>
+                                </div>
+                                <div layout="row">
+                                    <span><strong>Sub Categories: </strong> sub category 2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row">
+                            <div layout="row">
+                                <div flex>
+                                    <strong>Delivery Modes</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row">
+                            <div flex>
+                                <ul>
+                                    <li>
+                                        Shipping
+                                    </li>
+                                    <li>
+                                        Plucking
+                                    </li>
+                                    <li>
+                                        Hand Picked
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div layout="row">
+                    <div flex>
+                        <td-expansion-panel disableRipple >
+                            <ng-template td-expansion-panel-header>
+                                <md-toolbar color="accent" class="comments-section">
+                                    <span>Comments</span>
+                                </md-toolbar>
+                            </ng-template>
+                            
+                            <md-list>
+                                <md-list-item>
+                                    <h4 md-line>John Jameson</h4>
+                                    <p md-line>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                                </md-list-item>
+                                <md-divider md-inset></md-divider>
+                                <md-list-item>
+                                    <h4 md-line>John Jameson</h4>
+                                    <p md-line>Owner</p>
+                                </md-list-item>
+                                <md-divider md-inset></md-divider>
+                                
+                            </md-list>
+                        </td-expansion-panel>
+                    </div>
+                </div>
+            </md-tab>
+            <md-tab label="Product Timeline">
+                Content 2
+            </md-tab>
+        </md-tab-group>
     </div>
 </div>
