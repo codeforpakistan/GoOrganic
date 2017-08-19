@@ -12,6 +12,7 @@ import { DetailComponent } from './detail/detail.component';
 import { LoginComponent } from './login/login.component';
 import { FormComponent } from './form/form.component';
 import { NavigatorComponent } from './navigator/navigator.component';
+import { ProjectListingComponent } from './navigator/dashboard/projects-listing.componet';
 
 const routes: Routes = [
     {
@@ -21,6 +22,10 @@ const routes: Routes = [
             {
                 component: NavigatorComponent,
                 path: '',
+            },
+            {
+                component: ProjectListingComponent,
+                path: 'dashboard',
             }
         ]
     }

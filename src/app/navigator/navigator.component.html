@@ -1,17 +1,11 @@
-<td-layout-nav color="green">
-  <div td-toolbar-content layout="row" layout-align="center center" flex>
-    <img class="appLogo" src="../../../assets/images/asd_logo.png">
-    <span flex style="color: #FFF">Go Organic</span>
-    <span hide show-gt-md class="asd-label" style="font-size: 13px; position: absolute; right: 0px;">
-    </span>
-  </div>
-  
+<app-layout>
+
   <div class="bvf-error-msg" *ngIf="errorMsg">{{errorMsg}}</div>
   <div #scrcontainer class="md-content" (scroll)="containerScroll($event)">
     <div *tdLoading="'serviceLoader'; mode:'indeterminate'; type:'circle'; strategy:'replace'; color:'accent'">
       <div layout-gt-sm="row" tdMediaToggle="gt-xs" [mediaClasses]="['push-sm']">
         <div flex *ngIf="isShow">
-          <search  #searchBar [filters]="filters"></search>
+          <search #searchBar [filters]="filters"></search>
           <filters #filters [searchBar]="searchBar" [results]="results"></filters>
           <results #results></results>
         </div>
@@ -19,4 +13,4 @@
       <button *ngIf="false && showScrollTopBtn" class="bvf-scroll-top-btn" md-fab (click)="scrollToTop()"><md-icon>expand_less</md-icon></button>
     </div>
   </div>
-</td-layout-nav>
+</app-layout>
