@@ -76,19 +76,40 @@
                                 </md-toolbar>
                             </ng-template>
                             
-                            <md-list>
-                                <md-list-item>
-                                    <h4 md-line>John Jameson</h4>
-                                    <p md-line>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
-                                </md-list-item>
-                                <md-divider md-inset></md-divider>
-                                <md-list-item>
-                                    <h4 md-line>John Jameson</h4>
-                                    <p md-line>Owner</p>
-                                </md-list-item>
-                                <md-divider md-inset></md-divider>
-                                
-                            </md-list>
+                                <div class="comment-area">
+                                    <div layout="row">
+                                        <div flex>
+                                            <h4>John Jameson</h4>
+                                        </div>
+                                    </div>
+                                    <div layout="row">
+                                        <div flex>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                                    </div>
+                                </div>
+                                <md-divider></md-divider>
+                                <div class="comment-area">
+                                    <div layout="row">
+                                        <div flex>
+                                            <h4>John Jameson</h4>
+                                        </div>
+                                    </div>
+                                    <div layout="row">
+                                        <div flex>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</div>
+                                    </div>
+                                </div>
+                                <md-divider></md-divider>
+                                <div layout="row">
+                                    <div flex>
+                                        <div layout="row">
+                                            <md-input-container class="push-left push-right" flex floatPlaceholder="never">
+                                                <textarea flex mdInput placeholder="Add Comment Here"></textarea>
+                                            </md-input-container>
+                                        </div>
+                                        <div layout="row">
+                                            <button md-button class="comment-button"> Add Comment </button>
+                                        </div>
+                                    </div>
+                                </div>
                         </td-expansion-panel>
                     </div>
                 </div>
