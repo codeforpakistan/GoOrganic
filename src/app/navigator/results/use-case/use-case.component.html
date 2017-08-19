@@ -1,48 +1,33 @@
 <md-card (click)="showUseCaseDetails(usecaseObj)" class="md-card-colored bvf-md-card-clickable" flex>
-  <md-card-content class="UseCaseCard text-center">
-    <span layout="row" class="UseCaseDetails">
-
-    
-      <div flex="70" style="min-height: 120px; min-width: 233px;">
-        <div class="UseCaseName md-subhead" title="{{usecaseObj.usecaseName}}"
-              [ngStyle]="{'color':usecaseObj.usecaseNameColor}">{{usecaseObj.usecaseName}}</div>
-        </div>
-        <span class="UseCaseNameEdge">
-        <div class="UseCaseDetailsEdge">
-          <span *ngIf="usecaseObj.type?.toLowerCase() == 'traditional'">T</span>
-          <span *ngIf="usecaseObj.type?.toLowerCase() == 'advanced'">A</span>
-        </div>
+  <md-card-content style="display: inline-block">
+    <span layout="row">
+      <span flex>
+        <img src="../../../assets/images/cherry.png" height="80" width="80" style="float:left">
       </span>
-      
-
-      <!--------------- Owner Details Part in UseCase Card Starts ------------------- -->
-      <div layout="row" class="OwnerSection">
-        <div flex="30">
-          <img src="{{usecaseObj.url}}" class="OwnerImage">
-        </div>
-        <div flex="40" style="margin-top:3px">
-          <span title="{{usecaseObj.ownerName}}" class="OwnerName md-caption" layout="row" layout-align="center">{{usecaseObj.ownerName}}</span>
-          <span title="{{usecaseObj.usecaseId}}" class="UseCaseId md-caption" layout="row" layout-align="center"><span *ngIf="usecaseObj.usecaseId">ID#</span> {{usecaseObj.usecaseId}} </span>
-        </div>
-        <div flex="30" class="ContactIcons">
-          <a *ngIf="usecaseObj.emailAddress" href="mailto:{{usecaseObj.emailAddress}}"><img src="{{usecaseObj.emailIconUrl}}" class="EmailIconImage"></a>
-          <a *ngIf="usecaseObj.contactNumber" href="{{usecaseObj.contactNumber}}"><img src="{{usecaseObj.mobileIconUrl}}" class="MobileIconImage"></a>
-        </div>
-      </div>
-      <!--------------- Owner Details Part in UseCase Card Ends ------------------- -->
-
-      <!--------------- Dimension Details Part in UseCase Card Starts ------------------- -->
-      <div layout="row" class="DimensionDetails">
-        <ul flex="70" style="    margin-top: 7px;
-    margin-bottom: 7px;">
-          <li [ngClass]="{'active': 'idea' === usecaseObj.dimensionId?.toLowerCase()}">I</li>
-          <li [ngClass]="{'active': 'innovation' === usecaseObj.dimensionId?.toLowerCase()}">I</li>
-          <li [ngClass]="{'active': 'proven' === usecaseObj.dimensionId?.toLowerCase()}">P</li>
-          <li [ngClass]="{'active': 'packaged' === usecaseObj.dimensionId?.toLowerCase()}">P</li>
-        </ul>
-        <div flex="30" class="ViewCase" (click)="showDirCrud($event)">Edit Case</div>
-      </div>
-      <!--------------- Dimension Details Part in UseCase Card Ends ------------------- -->
+      <p flex style="font-size: 18px">{{usecaseObj.title}}</p>
     </span>
+    <span layout="row">
+      <span flex class="multiline-ellipsis">
+        {{usecaseObj.description}}
+      </span>
+    </span>
+    <span layout="row" style="margin-top: 10px">
+      <span flex>
+          <strong>Posted By:</strong> {{usecaseObj.posted_by}}
+      </span>
+    </span>
+    <span layout="row">
+      <span flex>
+          <strong>Timeline available:</strong> {{usecaseObj.timeline_available}}
+      </span>
+    </span>
+    <span layout="row">
+      <span flex>
+          <strong>Price:</strong> {{usecaseObj.price}}
+      </span>
+    </span>
+    <!--<span layout="row" class="view-details-section">
+      <button md-raised-button class="view-details-btn">View Details</button>
+    </span>-->
   </md-card-content>
 </md-card>

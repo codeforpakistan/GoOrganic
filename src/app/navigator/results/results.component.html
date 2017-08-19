@@ -1,20 +1,6 @@
 <div class="bvf-owner-card-section" id="results-section">
     <span *ngIf="promptMsg.length > 0" class="bvf-prompt-msg">{{promptMsg}}</span>
     
-    <!--<span layout="row">
-        <span *ngIf="showPrevBtn" flex class="bvf-owners-arrow" (click)="showPrevOwners()">
-            <md-icon>chevron_left</md-icon>
-        </span>
-        <span flex="100" layout-gt-md="row" layout="column" layout-wrap>
-            <owner-card hide show-gt-md class="bvf-owner-card" [showHrefs]=false flex *ngFor="let owner of changableOwners" [owner]="owner" [backgroundColor]="'#0088B2'" [fontColor]="'#FFF'">
-            </owner-card>
-            <owner-card hide-gt-md  [showHrefs]=false flex *ngFor="let owner of changableOwners" [owner]="owner" [backgroundColor]="'#0088B2'" [fontColor]="'#FFF'">
-            </owner-card>
-        </span>
-        <span *ngIf="showNextBtn" flex class="bvf-owners-arrow" (click)="showNextOwners()">
-            <md-icon>chevron_right</md-icon>
-        </span>
-    </span>-->
     <div  *ngFor="let usecase of usecases"> 
         <div *ngIf="usecase.businessFunctionName">
             <div class="bvf-usecases-area"  layout="row" layout-wrap>
