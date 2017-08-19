@@ -24,7 +24,13 @@ export class NearBySearchComponent implements OnInit {
 
     filteredStrings: string[];
 
-    stringsModel: string[] = this.strings.slice(0, 6);
+    stringsModel: string[] = [];
+
+    color = 'primary';
+    mode = 'determinate';
+    bufferValue = 75;
+
+    @Input() searchbarType: string;
 
     ngOnInit(): void {
         this.filterStrings('');
@@ -41,10 +47,4 @@ export class NearBySearchComponent implements OnInit {
             return this.stringsModel ? this.stringsModel.indexOf(filteredItem) < 0 : true;
         });
     }
-
-
-    color = 'accent';
-    mode = 'determinate';
-    value = 50;
-    bufferValue = 75;
 }
