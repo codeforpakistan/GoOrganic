@@ -20,6 +20,10 @@ td-layout-manage-list .mat-toolbar {
 .mat-dialog-container {
     padding: 0 !important;
 }
+.mat-green{
+    height: 100px !important;
+    background-color: #6AA451 !important;
+}
 
 // td-loading .td-loading-wrapper.td-overlay .td-loading {
 //    background: white;
@@ -32,4 +36,16 @@ td-layout-manage-list .mat-toolbar {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+.appLogo{
+    width: 5%;
+    margin-right: 10px;
+    margin-left: 10px
+}
+.mat-toolbar-layout{
+    margin-top: 15px;
+}
+.td-menu-button{
+    color: #fff !important;
+    display: none !important;
 }
