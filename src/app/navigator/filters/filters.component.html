@@ -24,7 +24,7 @@
                 <button md-raised-button class="bvf-view-btn" (click)="viewData()">View</button>
                 <button md-raised-button class="bvf-reset-btn" (click)="resetData()">Reset</button>
             </div>
-            <span flex [ngClass]="{'bvf-filters-text-ellipsis': isApplied}" style="
+            <!--<span flex [ngClass]="{'bvf-filters-text-ellipsis': isApplied}" style="
                 font-size: 12px;
                 color: #039BE6;">
                 <span><i>{{resultsCountDesc}}</i></span>
@@ -35,7 +35,7 @@
                 <span *ngIf="fiStr.length"><strong>Functional Insights: </strong>{{fiStr}}</span>
                 <span *ngIf="acStr.length"><strong>Analytical Capabilities: </strong>{{acStr}}</span>
                 <span *ngIf="maturityLevelsStr.length"><strong>Maturity Levels: </strong>{{maturityLevelsStr}}</span>
-            </span>
+            </span>-->
             <span *ngIf="filtersCount > 5"> 
                 <span class="bvf-filters-text-toggle" *ngIf="isApplied" (click)="isApplied = false">View More</span>
                 <span class="bvf-filters-text-toggle" *ngIf="!isApplied" (click)="isApplied = true">View Less</span>
