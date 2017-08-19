@@ -1,0 +1,35 @@
+// Custom style for loading elements without height
+.will-load {
+    min-height: 80px;
+}
+// Href line height wasn't right for md-icon-button
+a[md-icon-button] {
+    line-height: 36px;
+}
+
+// Capitalize
+.text-capital {
+  text-transform: capitalize;
+}
+
+// Lighter font weight in sub-toolbars
+td-layout-manage-list .mat-toolbar {
+    font-weight: 400;
+}
+
+.mat-dialog-container {
+    padding: 0 !important;
+}
+
+// td-loading .td-loading-wrapper.td-overlay .td-loading {
+//    background: white;
+// }
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

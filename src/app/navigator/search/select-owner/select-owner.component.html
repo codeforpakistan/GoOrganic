@@ -1,0 +1,32 @@
+<div (click)="$event.stopPropagation()">
+    <div layout="row" >
+        <td-search-input style="z-index: 4" flex="85" #searchInput (keyup)="enableSearchInputTerm()" class="bvf-searchbox-select-owner" placeholder="Select owner or type a name" [showUnderline]="false" [debounce]="500" (searchDebounce)="searchInputTerm($event)" (clear)="resetAll()">
+        </td-search-input>
+        <div flex="15" (click)="toggleDropDown()" class="bvf-dropdown-toggle-btn" [ngClass]="{'bvf-dropdown-toggle-btn-focused': showDropDown || showAutoComplete}">
+            <md-icon *ngIf="!showDropDown">keyboard_arrow_down</md-icon>
+            <md-icon *ngIf="showDropDown">keyboard_arrow_up</md-icon>
+        </div>
+    </div>
+    <div id="select-owner-container" flex-gt-sm="100" (click)="onClick($event)" *ngIf="showDropDown">
+        
+    </div>
+    <div flex-gt-sm="100"  *ngIf="showDropDown" hide show-gt-md class="bvf-select-owner-dropdown">
+        <md-card>
+            <div layout="row" layout-wrap >
+                    <owner-card [showHrefs]=true flex="25" (click)="selectOwner(owner); showDropDown = false;" layout="column" *ngFor="let owner of filteredOwners?.slice(fromRow, toRow)" [owner]="owner" [backgroundColor]="'#0088B2'" [fontColor]="'#FFF'"></owner-card>
+            </div>
+            <td-paging-bar #pagingBar pageSizeAllText="All" [pageSizeAll]="true" [pageSizes]="pageSizes" pageLinkCount="8"
+            [initialPage]="1" [firstLast]="firstLast" [pageSize]="8" [total]=filteredOwners.length (change)="change($event)">
+            <span td-paging-bar-label hide-xs>Row per page:</span>
+            {{pagingBar.range}} <span hide-xs>of {{pagingBar.total}}</span>
+            </td-paging-bar>
+        </md-card>
+    </div>
+    <div flex-gt-sm="100"  *ngIf="showDropDown" hide-gt-md class="bvf-select-owner-dropdown bvf-dropdown-small-view">
+        <md-card>
+            <div layout="column" layout-wrap>
+                <owner-card [showHrefs]=true flex="25" (click)="selectOwner(owner); showDropDown = false;" layout="column" *ngFor="let owner of filteredOwners" [owner]="owner" [backgroundColor]="'#0088B2'" [fontColor]="'#FFF'"></owner-card>
+            </div>
+        </md-card>
+    </div>
+</div>

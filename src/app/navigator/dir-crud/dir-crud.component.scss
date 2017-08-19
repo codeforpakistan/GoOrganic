@@ -1,0 +1,9 @@
+.bvf-td-layout {
+    width: 80vw;
+    height: 98vh;
+}
+.bvf-layout-nav {
+    /deep/ .mat-toolbar.mat-primary {
+        background-color: #0088B2;
+    }
+}

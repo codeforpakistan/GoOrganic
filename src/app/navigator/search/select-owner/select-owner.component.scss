@@ -1,0 +1,65 @@
+.bvf-selectbox {
+    width: 100%; 
+}
+.bvf-dropdown-toggle-btn-focused {
+    background-color: #0088B2;
+}
+.bvf-dropdown-toggle-btn {
+    display: inline-block;
+    color: #cdcdcd;
+    cursor: pointer;
+    text-align: center;
+    z-index: 4;
+}
+.bvf-dropdown-toggle-btn md-icon {
+    position: relative; 
+    top: 15px !important; 
+    font-size: 26px !important;
+}
+.bvf-searchbox-select-owner {
+    z-index: 4;
+    /deep/ [aria-label="cancel"] {
+        //display: none;
+    }
+    /deep/ button {
+        top: -4px;
+    }
+}
+.bvf-owner-card-clicked {
+    /deep/ md-card {
+        background-color:#ef6c00 !important;
+    }
+}
+owner-card:hover{
+    cursor: pointer;
+}
+
+.bvf-select-owner-dropdown {
+    position: absolute; 
+    z-index: 4; 
+    top: 58px; 
+    right: 12px; 
+    left: 11px;
+}
+
+owner-card {
+    /deep/ .bvf-contact-usecases {
+        display: none;
+    }
+}
+.bvf-dropdown-small-view {
+    top: 116px !important;
+    
+    /deep/ md-card {
+        max-height: 500px;
+        overflow: auto;
+    }
+}
+#select-owner-container {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 98.5vw;
+    z-index: 3;
+    min-height: 100vh
+}

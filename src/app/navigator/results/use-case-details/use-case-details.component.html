@@ -1,0 +1,18 @@
+<div class="bvf-use-case-details">
+    <div layout="row" class="bvf-use-case-details-top">
+        <h3 flex="80">
+            {{usecase.usecaseName}}
+        </h3>
+        <span flex class="bvf-use-case-details-close-btn">
+            <button md-button (click)="closeUseCaseDetails()">Close</button>
+        </span>
+    </div>
+    <div layout="row" class="bvf-use-case-details-body">
+        <div flex="55">
+            <div class="bvf-use-case-details-text">{{usecase.usecaseParagraph}}<a *ngIf="usecase.usecaseDetailsUrl" style="color: #039BE6; padding-left: 4px" href="{{usecase.usecaseDetailsUrl}}" target="_blank">More details</a></div>
+        </div>
+        <div flex="45">
+            <use-case-owner [usecaseOwner]="usecase"></use-case-owner>
+        </div>
+    </div>
+</div>

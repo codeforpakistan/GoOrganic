@@ -1,0 +1,128 @@
+<div class="bvf-expansion-panel" [ngClass]="{'bvf-collapse-filters': isVisible}">
+    <div [hidden]=isHidden>
+        <div layout-gt-md="row" layout="column">
+            <div flex>
+                <dimension-checklist #in [bgColor]="'#487386'" [checklistId]="1" [heading]="'CATEGORIES'" [scrollbarClassName]="'industries-scrollbar-content'" [searchboxClassName]="'industries-searchbox'" [dimensions]="industries" [checkboxClassName]="'bvf-indus-checkbox'" (resetSearchTriggered)="handleResetSearch()"></dimension-checklist>
+            </div>
+            <!--<div flex>
+                <dimension-checklist #bf [bgColor]="'#EF6C00'" [checklistId]="2" [heading]="'BUSINESS FUNCTIONS'" [scrollbarClassName]="'bf-scrollbar-content'" [searchboxClassName]="'bf-searchbox'" [dimensions]="businessFunctions" [checkboxClassName]="'bvf-bf-checkbox'" (resetSearchTriggered)="handleResetSearch()"></dimension-checklist>
+            </div>
+            <div flex>
+                <dimension-checklist #fi [bgColor]="'#6EC9CE'" [checklistId]="3" [heading]="'FUNCTIONAL INSIGHTS'" [scrollbarClassName]="'fi-scrollbar-content'" [searchboxClassName]="'fi-searchbox'"[dimensions]="functionalInsights" [checkboxClassName]="'bvf-fi-checkbox'" (resetSearchTriggered)="handleResetSearch()"></dimension-checklist>    
+            </div>
+            <div flex>
+                <dimension-checklist #ac [bgColor]="'#B963BA'" [checklistId]="4" [heading]="'ANALYTICAL CAPABILITIES'" [scrollbarClassName]="'ac-scrollbar-content'" [searchboxClassName]="'ac-searchbox'"[dimensions]="analyticalCapabilities" [checkboxClassName]="'bvf-ac-checkbox'" (resetSearchTriggered)="handleResetSearch()"></dimension-checklist>   
+            </div>-->
+        </div>
+        <!--<div layout="row">
+            <div flex>
+                <dimension-slider [maturityLevels]="maturityLevels" (resetSearchTriggered)="handleResetSearch()"></dimension-slider>    
+            </div>
+        </div>-->
+        <div layout="column" layout-padding class="bvf-filters-btn-area">
+            <div flex>
+                <button md-raised-button class="bvf-view-btn" (click)="viewData()">View</button>
+                <button md-raised-button class="bvf-reset-btn" (click)="resetData()">Reset</button>
+            </div>
+            <span flex [ngClass]="{'bvf-filters-text-ellipsis': isApplied}" style="
+                font-size: 12px;
+                color: #039BE6;">
+                <span><i>{{resultsCountDesc}}</i></span>
+                <span *ngIf="searchTextStr.length"><strong>Search: </strong>{{searchTextStr}}</span>
+                <span *ngIf="ownersStr.length"><strong>Owners: </strong>{{ownersStr}}</span>
+                <span *ngIf="indusStr.length"><strong>Industries: </strong>{{indusStr}}</span>
+                <span *ngIf="bfStr.length"><strong>Business Functions: </strong>{{bfStr}}</span>
+                <span *ngIf="fiStr.length"><strong>Functional Insights: </strong>{{fiStr}}</span>
+                <span *ngIf="acStr.length"><strong>Analytical Capabilities: </strong>{{acStr}}</span>
+                <span *ngIf="maturityLevelsStr.length"><strong>Maturity Levels: </strong>{{maturityLevelsStr}}</span>
+            </span>
+            <span *ngIf="filtersCount > 5"> 
+                <span class="bvf-filters-text-toggle" *ngIf="isApplied" (click)="isApplied = false">View More</span>
+                <span class="bvf-filters-text-toggle" *ngIf="!isApplied" (click)="isApplied = true">View Less</span>
+            </span>
+        </div>
+    </div>
+</div>
+<div class="bvf-collapse-btn-area">
+    <span class="bvf-collapse-btn" (click)="isHidden = !isHidden">
+        <a *ngIf="isHidden">
+            <!--<img src="../../../assets/images/down-arrow.png">-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve" width="25px" height="25px">
+            <g>
+                <path d="M27,0C12.112,0,0,12.112,0,27s12.112,27,27,27s27-12.112,27-27S41.888,0,27,0z M27,52C13.215,52,2,40.785,2,27   S13.215,2,27,2s25,11.215,25,25S40.785,52,27,52z" fill="#bfbfbf"/>
+                <path d="M38.293,21.587L27,32.88L15.707,21.587c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414l11.498,11.498   c0.333,0.333,0.771,0.5,1.209,0.5c0.438,0,0.876-0.167,1.209-0.5l11.498-11.498c0.391-0.391,0.391-1.023,0-1.414   S38.684,21.196,38.293,21.587z" fill="#bfbfbf"/>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            </svg>
+        </a>
+        <a *ngIf="!isHidden">
+            <!--<img src="../../../assets/images/up-arrow.png">-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 54 54" style="enable-background:new 0 0 54 54;" xml:space="preserve" width="25px" height="25px">
+            <g>
+                <path d="M27,0C12.112,0,0,12.112,0,27s12.112,27,27,27s27-12.112,27-27S41.888,0,27,0z M27,52C13.215,52,2,40.785,2,27   S13.215,2,27,2s25,11.215,25,25S40.785,52,27,52z" fill="#bfbfbf"/>
+                <path d="M28.209,19.501c-0.666-0.666-1.752-0.666-2.418,0L14.293,30.999c-0.391,0.391-0.391,1.023,0,1.414s1.023,0.391,1.414,0   L27,21.12l11.293,11.293c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414   L28.209,19.501z" fill="#bfbfbf"/>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            <g>
+            </g>
+            </svg>
+
+        </a>
+    </span> 
+</div>

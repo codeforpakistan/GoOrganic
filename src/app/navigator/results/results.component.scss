@@ -1,0 +1,119 @@
+.bvf-results-owner {
+    /deep/ md-card {
+        margin: 0px;
+    }
+    /deep/ md-card-content {
+        padding: 5px;
+    }
+    /deep/ md-card-content img {
+        border: 3px solid rgb(239, 108, 0);
+    }
+}
+.bvf-results-owner owner-card:not(:last-child) {
+    margin-left: 3px;
+}
+.bvf-owner-card-section {
+    background-color: #FFF;
+    padding-top: 20px;
+}
+.bvf-bf-label {
+    position: relative;
+    display: inline-block;
+    padding: 1em 5em 1em 1em;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    height: 12px;
+    width: 300px;
+
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bvf-bf-label:after {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  left: 200px;
+  top: 0px;
+  content: "";
+  transform: skew(45deg);
+  transform-origin: bottom right;
+}
+.bvf-usecases-area {
+    margin-top: 20px;
+    background-color: #fff;
+}
+.bvf-usecase-item {
+    width: 248px;
+}
+
+.bvf-collapse-btn {
+    display: inline-block;
+    width: 25px;
+    cursor: pointer;
+    position: relative;
+    top: -12px;
+    margin: 0 auto;
+    height: 6px;
+    border-radius: 50px;
+
+    a {
+        display: inline-block;
+        background-color: #fff;
+        border-radius: 50%;
+        height: 25px;
+    }
+}
+.bvf-collapse-btn img {
+    width: 26px;
+}
+.bvf-filters-btn-area {
+    text-align: center;
+    margin-top: 25px;
+
+    .bvf-view-btn {
+        margin-right: 20px; 
+        background-color:#039BE6; 
+        color: white;
+    }
+    .bvf-reset-btn {
+        background-color: #EF6C00; 
+        color:white;
+    }
+}
+.bvf-panel {
+    border-bottom: 1px solid #cecece; 
+}
+.bvf-indus-bg {
+   background-color: rgb(72, 115, 134);
+}
+.bvf-bf-bg {
+    background-color: #ef6c00;
+}
+.bvf-fi-bg {
+    background-color: rgb(110, 201, 206);
+}
+.bvf-ac-bg {
+    background-color: rgb(185, 99, 186);
+}
+.bvf-prompt-msg {
+    text-align: center;
+    display: block;
+}
+.bvf-owners-arrow {
+    cursor: pointer;
+    padding-top: 35px;
+    md-icon {
+        font-size: 50px;
+    }
+}
+.bvf-owners-arrow:hover {
+    background: #cecece;
+}
+.bvf-owner-card {
+    max-width: 25%
+}

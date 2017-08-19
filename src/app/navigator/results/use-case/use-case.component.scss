@@ -1,0 +1,160 @@
+ul{
+  padding-left: 0px;
+}
+
+li {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 12px;
+  font-family: arial, calibri, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+  background: #1F1A1E;
+  display: inline-block;
+  color: white;
+  position: relative;
+  margin: 0px 0px 0px 10px;
+
+}
+
+li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background: black;
+
+}
+
+li:first-child::before {
+  display: none;
+}
+
+li:after{
+
+}
+
+.active {
+  background: #FFA805;
+  color: black;
+  z-index: 1;
+}
+
+.active ~ li {
+  background: #1F1A1E;
+}
+
+.active ~ li::before {
+  background: #1F1A1E;
+}
+.UseCaseNameEdge{
+  display: inline-block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.UseCaseDetails{
+  background-color: #D9D9D9;
+  display: block;
+  position: relative;
+}
+.UseCaseName
+{
+  width: 120px;
+  padding-top: 10px;
+  text-align: left;
+  padding-left: 10px;
+  display: block;
+  display: -webkit-box;
+  max-width: 200px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.UseCaseDetailsEdge{
+  width: 0;
+  height:0px;
+  border-top: 60px solid #FE6508;
+  border-left: 60px solid transparent;
+  position: relative;
+
+  /deep/ span {
+    position: absolute;
+    top: -47px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    left: -20px;
+  }
+}
+
+.EmailIconImage{
+  height:20px;
+  width: 20px;
+}
+.MobileIconImage{
+  height:20px;
+  width: 20px;
+}
+.ContactIcons
+{
+  margin-top: 13px;
+}
+.OwnerImage {
+  height:35px;
+  width:35px;
+  //border: 2px solid #FD8F3A;
+  margin-top: 5px;
+}
+.OwnerName {
+  color:white;
+  font-weight: bold;
+  padding-top: 4px;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.UseCaseId {
+  color:white;
+  //padding-top: 3px;
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.DimensionDetails
+{
+  background-color: #FBEDE0;
+  border: 1px solid;
+  margin-top: 5px;
+}
+.ViewCase
+{
+  font-size: 12px;
+  margin-top: 11px;
+  color:#2996B7;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.ViewCase:hover {
+  text-decoration: underline;
+}
+.UseCaseCard {
+  padding: 7px;
+}
+.OwnerSection {
+  background-color: #0088B2;
+}
+.bvf-md-card-clickable {
+  cursor: pointer;
+}

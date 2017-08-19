@@ -1,0 +1,23 @@
+<div flex class="bvf-checklist" [ngStyle]="{'background-color': bgColor}">
+    <div class="bvf-select-all">
+        <md-checkbox flex [checked]="isChecked" (change)="toggleAllDimensions()" [disableRipple]=true class="bvf-md-checkbox bvf-red" [ngClass]="{'bvf-indus-checkbox': 'bvf-indus-checkbox' === checkboxClassName, 'bvf-bf-checkbox': 'bvf-bf-checkbox' === checkboxClassName, 'bvf-fi-checkbox': 'bvf-fi-checkbox' === checkboxClassName, 'bvf-ac-checkbox': 'bvf-ac-checkbox' === checkboxClassName}">{{heading}}</md-checkbox>
+        <span flex *ngIf="dimCount">{{dimCount}}</span>
+    </div>
+    <div class="bvf-search-box" [ngClass]="{'industries-searchbox': 'industries-searchbox' === searchboxClassName, 'bf-searchbox': 'bf-searchbox' === searchboxClassName, 'fi-searchbox': 'fi-searchbox' === searchboxClassName, 'ac-searchbox': 'ac-searchbox' === searchboxClassName}" [ngStyle]="{'background-color': bgColor}">
+        <td-search-box #search backIcon="arrow_back" [showUnderline]="false" [debounce]="500" [alwaysVisible]="true" (searchDebounce)="searchInputTerm($event)" (clear)="searchInputTerm('')">
+        </td-search-box>
+    </div>
+    <md-list class="will-load" [ngClass]="{'industries-scrollbar-content': 'industries-scrollbar-content' === scrollbarClassName, 'bf-scrollbar-content': 'bf-scrollbar-content' === scrollbarClassName, 'fi-scrollbar-content': 'fi-scrollbar-content' === scrollbarClassName, 'ac-scrollbar-content': 'ac-scrollbar-content' === scrollbarClassName}">
+        <div class="md-padding" *ngIf="filteredDimensions?.length === 0" layout="row" layout-align="center center">
+            <strong>No item to display.</strong>
+        </div>
+        <ng-template let-dimension let-last="last" ngFor [ngForOf]="filteredDimensions">
+            <!--<span class="bvf-md-list-item">-->
+            <md-list-item class="bvf-md-list-item">
+                <md-checkbox [checked]="dimension.isChecked" (change)="toggleChecklistDimension({event: $event, dimension: dimension})" [disableRipple]=true class="bvf-md-checkbox bvf-checkbox-label" [ngClass]="{'bvf-indus-checkbox': 'bvf-indus-checkbox' === checkboxClassName, 'bvf-bf-checkbox': 'bvf-bf-checkbox' === checkboxClassName, 'bvf-fi-checkbox': 'bvf-fi-checkbox' === checkboxClassName, 'bvf-ac-checkbox': 'bvf-ac-checkbox' === checkboxClassName}"> {{dimension.name}}</md-checkbox>
+            </md-list-item>
+            <!--</span>-->
+        </ng-template>
+    </md-list>
+</div>
+

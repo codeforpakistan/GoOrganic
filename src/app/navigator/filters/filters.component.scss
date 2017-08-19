@@ -1,0 +1,47 @@
+.bvf-expansion-panel {
+    background-color: #fff;
+}
+.bvf-collapse-btn {
+    display: inline-block;
+    width: 28px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    top: 16px;
+    background-color: #fff;
+}
+.bvf-collapse-btn img {
+    width: 26px;
+}
+.bvf-collapse-btn-area {
+    border-bottom: 1px solid #cecece;
+    background-color: #fff;
+    text-align: center;
+}
+.bvf-filters-btn-area {
+    text-align: center;
+    margin-top: 25px;
+
+    .bvf-view-btn {
+        margin-right: 20px; 
+        background-color:#039BE6; 
+        color: white;
+    }
+    .bvf-reset-btn {
+        background-color: #EF6C00; 
+        color:white;
+    }
+}
+.bvf-filters-text-ellipsis {
+    max-width: 96vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.bvf-filters-text-toggle {
+    font-size: 12px;
+    cursor: pointer;
+}
+.bvf-filters-text-toggle:hover {
+    text-decoration: underline;
+}

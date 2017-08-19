@@ -1,0 +1,11 @@
+<md-card>
+  <md-card-content class="text-center">
+    <!--<maturity-level [reset]="isIdeaActive" [name]="'Idea'" (click)="toggleIdea()" [imageUrl]="'../../../../assets/images/idea.png'"></maturity-level>
+    <maturity-level [reset]="isInnovationActive" [name]="'Innovation'" (click)="toggleInnovation()" [imageUrl]="'../../../../assets/images/innovation.png'"></maturity-level>
+    <maturity-level [reset]="isProvenActive" [name]="'Proven'" (click)="toggleProven()" [imageUrl]="'../../../../assets/images/proven.png'"></maturity-level>
+    <maturity-level [reset]="isPackagedActive" [name]="'Packaged'" (click)="togglePackaged()" [imageUrl]="'../../../../assets/images/packaged.png'"></maturity-level>-->
+    
+    <maturity-level #ml *ngFor="let maturityLevel of maturityLevels" [data]="maturityLevel" (click)="toggleLevel(maturityLevel)"></maturity-level>
+  
+  </md-card-content>
+</md-card>

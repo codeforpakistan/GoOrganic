@@ -1,0 +1,35 @@
+<td-layout-nav logo="assets:teradata" color="accent">
+  <div td-toolbar-content layout="row" layout-align="center center" flex>
+    <span flex>Business Value Framework</span>
+    <span hide show-gt-md class="asd-label" style="font-size: 13px; position: absolute; right: 0px;">
+      <span style="position: relative">
+        <span style="
+    position: absolute;
+    right: 10px;
+    bottom: 15px" >Designed by <strong>Analytics Solution Development</strong></span>
+      </span>
+      <img style="width: 68%" src="../../../assets/images/asd_logo.png">
+    </span>
+  </div>
+  
+  <div class="bvf-error-msg" *ngIf="errorMsg">{{errorMsg}}</div>
+  <div #scrcontainer class="md-content" (scroll)="containerScroll($event)">
+    <div *tdLoading="'serviceLoader'; mode:'indeterminate'; type:'circle'; strategy:'replace'; color:'accent'">
+      <div layout-gt-sm="row" tdMediaToggle="gt-xs" [mediaClasses]="['push-sm']">
+        <div flex *ngIf="isShow">
+          <search  #searchBar [filters]="filters"></search>
+          <filters #filters [searchBar]="searchBar" [results]="results"></filters>
+          <results #results></results>
+        </div>
+      </div>
+      <button *ngIf="false && showScrollTopBtn" class="bvf-scroll-top-btn" md-fab (click)="scrollToTop()"><md-icon>expand_less</md-icon></button>
+    </div>
+  </div>
+  <td-layout-footer>
+    <div layout="row" layout-align="start center">
+      <span class="md-caption">Copyright &copy; {{copyrightYear}} Teradata. All rights reserved</span>
+      <span flex></span>
+      <md-icon class="md-icon-ux" svgIcon="assets:teradata-ux"></md-icon>
+    </div>
+  </td-layout-footer>
+</td-layout-nav>

@@ -1,0 +1,27 @@
+.bvf-use-case-details {
+    width: 65%; padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px; color: #444649;
+    width: 800px
+}
+.bvf-use-case-details-top {
+    border-bottom: 1px solid #444649; 
+    padding-bottom: 6px;
+}
+.bvf-use-case-details-close-btn {
+    text-align: right; 
+    padding-top: 10px;
+
+    /deep/ button {
+        background-color: #039BE6; 
+        color: white;
+    }
+}
+.bvf-use-case-details-body {
+    overflow-y: auto; 
+    max-height: 400px;
+}
+.bvf-use-case-details-text {
+    padding-top: 13px; 
+    margin-right: 20px;
+}

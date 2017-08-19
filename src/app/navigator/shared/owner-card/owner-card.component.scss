@@ -1,0 +1,27 @@
+.bvf-owner-info {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+
+    .bvf-owner-name-format {
+        text-align: left;
+        padding-left: 5px;
+        width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .bvf-owner-caption-format {
+        text-align: left;
+        padding-left: 5px;
+    }
+}
+
+star-rating-comp {
+    /deep/ div {
+        float: left;
+        padding-left: 2px;
+    }
+    /deep/ .star-container {
+        margin-left: 0;
+    }    
+}

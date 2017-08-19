@@ -1,0 +1,25 @@
+.bvf-autocomplete {
+    width: 100%; 
+}
+.bvf-searchbox-cancel-btn {
+    /deep/ [aria-label="cancel"] {
+        //display: none;
+    }
+    /deep/ button {
+        top: -4px;
+    }
+}
+#select-owner-container {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 98.5vw;
+    z-index: 5;
+    min-height: 100vh
+}
+
+td-search-input {
+    /deep/ md-input-container {
+        z-index: 6;
+    }
+}

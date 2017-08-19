@@ -1,0 +1,27 @@
+<div *ngIf="mode === detailed" layout="column" class="maturity-level-section">
+    <div flex>
+        <span class="level-idea">
+            Idea
+        </span>
+        <span class="level-innovation">
+            Innovation
+        </span>
+        <span class="level-proven">
+            Proven
+        </span>
+        <span class="level-packaged">
+            Packaged
+        </span>
+    </div>
+    <div flex class="levels">
+        <span class="level level1" [ngClass]="{'level-active': 'idea' === level.toLowerCase()}">
+        </span>
+        <span class="level level2" [ngClass]="{'level-active': 'innovation' === level.toLowerCase()}">
+        </span>
+        <span class="level level3" [ngClass]="{'level-active': 'proven' === level.toLowerCase()}">
+        </span>
+        <span class="level level4" [ngClass]="{'level-active': 'packaged' === level.toLowerCase()}">
+        </span>
+        <hr class="connector-line">
+    </div>
+</div>

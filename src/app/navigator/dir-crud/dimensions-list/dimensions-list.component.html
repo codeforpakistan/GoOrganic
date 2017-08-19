@@ -1,0 +1,35 @@
+<md-card tdMediaToggle="gt-xs" [mediaClasses]="['push']">
+    <div layout="row" layout-align="start center" class="pad-left-sm pad-right-sm">
+        <span *ngIf="!searchBox.searchVisible" class="push-left-sm">
+            <span class="md-title"><input mdInput [(ngModel)]="data.category"></span>
+        </span>
+        <td-search-box #searchBox backIcon="arrow_back" class="push-right-sm" placeholder="Search here" (searchDebounce)="search($event)" flex>
+        </td-search-box>
+        <span class="bvf-add-dimension" (click)="addDimension()">
+            <md-icon md-font-set="md">add</md-icon>
+        </span>
+        <span class="bvf-add-dimension" (click)="saveDimensionChanges()">
+            <md-icon md-font-set="md">save</md-icon>
+        </span>
+    </div>
+    <md-divider></md-divider>
+    <md-list>
+        <md-list-item layout="row" *ngIf="filteredDimensions.length == 0">
+            No items found.
+        </md-list-item>
+        <td-message layout="row" *ngIf="showMessageCard == true" label="Dimensions Saved!" color="green" icon="info">
+           Dimensions Saved!
+        </td-message>
+        <md-list-item layout="row" *ngFor="let d of filteredDimensions; let i = index">
+            <!--<span flex="10">{{d.item}}</span>-->
+            <md-input-container flex="100" layout="row">
+                <input mdInput [(ngModel)]="d.dimension" flex="90">
+                <span class="bvf-dimension-clear-btn" flex="10" (click)="removeDimension(i)">
+                    <md-icon md-font-set="md">
+                        clear
+                    </md-icon>
+                </span>
+            </md-input-container>
+        </md-list-item>
+    </md-list>
+</md-card>

@@ -1,0 +1,16 @@
+<md-card class="md-card-colored" flex [ngStyle]="{'background-color': backgroundColor}" >
+    <md-card-content class="text-center">
+        <div layout="row">
+        <div flex="30">  
+                <img  src="{{owner.url}}" height="80" width="80" style="float:left"/>
+        </div>
+        <div flex="70" class="bvf-owner-info">
+            <div title="{{owner.name}}" class="md-subhead bvf-owner-name-format" [ngStyle]="{'color':fontColor}">{{owner.name}} </div>
+            <div title="{{owner.designation}}" class="md-caption bvf-owner-caption-format" [ngStyle]="{'color':fontColor}">{{owner.designation}}</div>
+            <div *ngIf="showHrefs" class="md-caption bvf-contact-usecases" [ngStyle]="{'color':'#BFBFBF'}">Contact Owner | View Use Cases</div>
+            <div>  
+                <star-rating-comp [readOnly]="true" [size]="'small'" [starType]="'svg'" [rating] = "owner.rating" ></star-rating-comp></div>
+            </div>
+        </div>
+    </md-card-content>
+</md-card>

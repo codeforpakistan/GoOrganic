@@ -1,0 +1,22 @@
+<md-card class="bvf-usecase-owner">
+    <md-card-content>
+        <div class="bvf-usecase-owner-label">
+            <h2>Owner</h2>
+        </div>
+        <owner-card [showHrefs]=false class="bvf-usecase-owner-card" [owner]="{
+            url : usecaseOwner.url,
+            name: usecaseOwner.ownerName,
+            designation : usecaseOwner.ownDesignation,
+            rating: usecaseOwner.rating
+        }" [backgroundColor]="'white'" [fontColor]="'#000'">
+        </owner-card>
+        <div class="bvf-last-updated-date">
+            <i>Last updated on {{usecaseOwner.lastUpdatedDate}}</i>
+        </div>
+        <div layout="row">
+            <!--<button flex md-button class="bvf-view-usecases-btn">View other cases by this owner</button>-->
+        </div>
+        <social-card [socialObj]="{'mail': usecaseOwner.emailAddress, 'twitter': usecaseOwner.twitterUrl, 'linkedin': usecaseOwner.linkedinUrl }"></social-card>
+        <maturity-scale [level]="usecaseOwner.dimensionId" [mode]="detailed"></maturity-scale>
+    </md-card-content>
+</md-card>

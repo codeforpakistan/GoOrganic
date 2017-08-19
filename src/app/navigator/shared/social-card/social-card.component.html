@@ -1,0 +1,7 @@
+<div layout="row">
+    <md-card flex class="bvf-social-icons">
+        <social-button *ngIf="socialObj.mail" [socialUrl]="socialObj.mail" [socialIcon]="'mail'" ></social-button>
+        <social-button *ngIf="socialObj.twitter" [socialUrl]="socialObj.twitter" [socialIcon]="'twitter'" ></social-button>
+        <social-button *ngIf="socialObj.linkedin" [socialUrl]="socialObj.linkedin" [socialIcon]="'linkedin'" ></social-button>
+    </md-card>
+</div>

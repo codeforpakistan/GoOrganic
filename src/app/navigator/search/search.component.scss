@@ -1,0 +1,17 @@
+.bvf-search {
+    background-color: #fff;
+    border-bottom: 1px solid #cdcdcd;
+}
+.bvf-search  > div:not(:last-child) { 
+    padding-left: 15px;
+}
+.bvf-search  > div:not(:last-child):not(:first-child) { 
+    border-left: 1px solid #cdcdcd;
+}
+.bvf-button {
+    padding: 10px;
+}
+.bvf-button button {
+    color: #fff;
+    background-color: #428bca;
+}

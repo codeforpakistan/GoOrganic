@@ -1,0 +1,56 @@
+.maturity-level-section {
+    margin-top: 17px;
+    color: #444649;
+    font-size: 12px;
+}
+.level {
+  background-color: #039BE6;
+  display: inline-block;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+}
+.levels {
+  position:relative;
+  text-align: center;
+  border: 1px solid transparent;
+}
+.connector-line {
+  border: 0;
+  border-top: 2px solid #039BE6;
+}
+.level1 {
+  position: absolute;
+  top: 0px;
+  left: 18%;
+}
+.level2 {
+  position: absolute;
+  top: 0px;
+  left: 38%
+}
+.level3 {
+  position: absolute;
+  top: 0px;
+  left: 58%
+}
+.level4 {
+  position: absolute;
+  top: 0px;
+  left: 78%
+}
+.level-idea {
+    margin-left: 17%;
+}
+.level-innovation {
+    margin-left: 7%;
+}
+.level-proven {
+    margin-left: 4%;
+}
+.level-packaged {
+    margin-left: 3%;
+}
+.level-active {
+    background-color: #ef6c00;
+}

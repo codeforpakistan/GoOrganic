@@ -1,0 +1,146 @@
+.bvf-checklist {
+    background-color: #487386;
+    color: #fff;
+}
+.bvf-checklist .bvf-select-all {
+    padding-left: 16px;
+    padding-top: 13px;
+    font-weight: bold;
+    padding-bottom: 13px;
+}
+.bvf-checklist md-list {
+    max-height: 150px; 
+    height: 150px; 
+    overflow-y: scroll
+}
+.bvf-search-box {
+    padding-left: 9px;
+    font-weight: bold;
+}
+.bvf-dimension-name {
+    margin-left: 6px;
+    color: #fff;
+}
+.bvf-md-list-item {
+    display: inline-block;
+    font-size: 16px;
+    height: 30px;
+    padding: 0 16px;
+    position: relative;
+
+}
+.bvf-md-checkbox {
+    color: #fff;
+}
+
+/*md-checkbox.md-checked ._md-icon {
+    background-color: transparent;
+}
+
+md-checkbox ._md-icon {
+    border-color: white;
+}*/
+
+.industries-scrollbar-content::-webkit-scrollbar {
+    width: 12px;
+}
+.industries-scrollbar-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+.industries-scrollbar-content::-webkit-scrollbar-thumb {
+    background-color:#8AA5B0;
+}
+
+.bf-scrollbar-content::-webkit-scrollbar {
+    width: 12px;
+}
+.bf-scrollbar-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+.bf-scrollbar-content::-webkit-scrollbar-thumb {
+    background-color:#FF8941;
+}
+
+.fi-scrollbar-content::-webkit-scrollbar {
+    width: 12px;
+}
+.fi-scrollbar-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+.fi-scrollbar-content::-webkit-scrollbar-thumb {
+    background-color:#A1DBDF;
+}
+
+.ac-scrollbar-content::-webkit-scrollbar {
+    width: 12px;
+}
+.ac-scrollbar-content::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+.ac-scrollbar-content::-webkit-scrollbar-thumb {
+    background-color:#DBBFD6;
+}
+
+.industries-searchbox {
+    background-color:#8AA5B0 !important;
+}
+.bf-searchbox {
+    background-color:#FF8941 !important;
+}
+.fi-searchbox {
+    background-color:#A1DBDF !important;
+}
+.ac-searchbox {
+    background-color: #DBBFD6 !important;
+}
+
+md-checkbox {
+    /deep/ .mat-checkbox-frame {
+        background-color: white !important;
+        border: none !important;
+    }
+
+    /deep/ .mat-checkbox-background {
+        border-radius: 0px;
+    }
+}
+
+.bvf-checkbox-bgColor:hover {
+    /deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+        background-color: green !important;
+    }
+}
+
+.bvf-checkbox-label {
+    /deep/ .mat-checkbox-label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 233px;
+        font-size: 14px;
+    }
+}
+
+.bvf-indus-checkbox.mat-checkbox-checked {
+    /deep/ .mat-checkbox-background {
+        background-color: rgb(72, 115, 134);
+    }
+}
+
+.bvf-bf-checkbox.mat-checkbox-checked {
+    /deep/ .mat-checkbox-background {
+        background-color: rgb(239, 108, 0);
+    }
+}
+
+.bvf-fi-checkbox.mat-checkbox-checked {
+    /deep/ .mat-checkbox-background {
+        background-color: rgb(110, 201, 206);
+    }
+}
+
+.bvf-ac-checkbox.mat-checkbox-checked {
+    /deep/ .mat-checkbox-background {
+        background-color: rgb(185, 99, 186);
+    }
+}

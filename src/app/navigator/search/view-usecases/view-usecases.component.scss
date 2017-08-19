@@ -1,0 +1,17 @@
+.bvf-autocomplete {
+    width: 100%; 
+}
+.bvf-searchbox-cancel-btn {
+    /deep/ [aria-label="cancel"] {
+        display: none;
+    }
+}
+.bvf-view-usecases {
+    color: #bfbfbf;
+    display: inline-block;
+    padding-top: 17px;
+}
+.bvf-usecases-count {
+    padding-left: 10px;
+    color: #000
+}

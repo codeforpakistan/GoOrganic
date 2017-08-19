@@ -1,0 +1,10 @@
+<td-search-input class="bvf-searchbox-cancel-btn" #search  placeholder="Search for a product by name" [showUnderline]="false" [debounce]="500" (searchDebounce)="searchInputTerm($event)" (search)="doSearch($event, search)" (clear)="resetAll()">
+</td-search-input>
+<div id="select-owner-container" flex-gt-sm="100" (click)="onClick($event)" *ngIf="showDropDown">
+        
+</div>
+<div flex *ngIf="showDropDown" style="z-index: 1000; position: absolute; background-color: #fff; max-height: 256px; overflow: auto">
+   <md-option *ngFor="let option of filteredOptions" [value]="option" (click)="selectOption(search, option)">
+      {{ option.name }}
+   </md-option>
+</div>
