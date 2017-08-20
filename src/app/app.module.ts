@@ -52,6 +52,16 @@ import { DirCrudComponent } from './navigator/dir-crud/dir-crud.component';
 import { DimensionsListComponent } from './navigator/dir-crud/dimensions-list/dimensions-list.component';
 import { LandingPageComponet } from './navigator/landingPage.component';
 
+import { NearBySearchComponent } from './nearby-search/nearby-search.component';
+
+import { CovalentChipsModule } from '@covalent/core';
+
+import {MdProgressBarModule} from '@angular/material';
+
+import { EndHungerComponent } from './end-hunger/end-hunger.component';
+
+import { EndPovertyComponent } from './end-poverty/end-poverty.component';
+
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
   SendRequestInterceptor
@@ -86,7 +96,10 @@ export function getAPI(): string {
     DirCrudComponent,
     DimensionsListComponent,
     AppLayoutComponent,
-    LandingPageComponet
+    LandingPageComponet,
+    NearBySearchComponent,
+    EndHungerComponent,
+    EndPovertyComponent
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     AppRoutingModule,
@@ -105,7 +118,9 @@ export function getAPI(): string {
     CovalentHighlightModule,
     CovalentMarkdownModule,
     CovalentExpansionPanelModule,
-    CovalentMessageModule
+    CovalentMessageModule,
+    CovalentChipsModule,
+    MdProgressBarModule
   ], // modules needed to run this module
   providers: [
     httpInterceptorProviders,
