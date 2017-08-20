@@ -3,15 +3,14 @@
   <div #scrcontainer class="md-content" (scroll)="containerScroll($event)">
     <div *tdLoading="'serviceLoader'; mode:'indeterminate'; type:'circle'; strategy:'replace'; color:'accent'">
       <div layout-gt-sm="row" tdMediaToggle="gt-xs" [mediaClasses]="['push-sm']">
-        <div flex *ngIf="isShow">
-          <search #searchBar [filters]="filters"></search>
-        </div>
         <!--<div flex *ngIf="isShow">
+          <search #searchBar [filters]="filters"></search>
+        </div>-->
+        <div flex *ngIf="isShow">
           <search  #searchBar [filters]="filters"></search>
->>>>>>> nearby-search
           <filters #filters [searchBar]="searchBar" [results]="results"></filters>
           <results #results></results>
-        </div>-->
+        </div>
         <!--<nearby-search [searchbarType]="'user'"></nearby-search>-->
       </div>
       <button *ngIf="false && showScrollTopBtn" class="bvf-scroll-top-btn" md-fab (click)="scrollToTop()"><md-icon>expand_less</md-icon></button>

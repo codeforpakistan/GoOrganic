@@ -36,6 +36,10 @@ const routes: Routes = [
             {
                 component: GetToWorkComponent,
                 path: 'market',
+            },
+            {
+                component: NavigatorComponent,
+                path: 'marketplace',
             }
         ]
     }

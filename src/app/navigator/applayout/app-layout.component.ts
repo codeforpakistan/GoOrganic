@@ -24,6 +24,11 @@ export class AppLayoutComponent {
     title: 'Get to Work',
     route: '/market',
     icon: 'assignment',
+},
+{
+    title: 'Market Place',
+    route: '/marketplace',
+    icon: 'assignment',
 }
 ];
 }
