@@ -28,7 +28,7 @@ export class LandingPageComponet implements AfterViewInit {
         },
         {
             data: "../../../assets/images/Shop.svg",
-            backgroundSvg: ["../../../assets/images/shop-area.svg","../../../assets/images/mountains.svg"],
+            backgroundSvg: ["../../../assets/images/shop-area.svg","../../../assets/images/mountains.png"],
             active: false,
             isSvgBased: true
         }

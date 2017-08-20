@@ -11,19 +11,24 @@ export class AppLayoutComponent {
     title: 'Home',
     route: '',
     icon: 'home',
-}, {
-    title: 'End Hunger',
-    route: '/charity',
-    icon: 'laptop_mac',
-}, {
-    title: 'End Poverty',
-    route: '/buy',
-    icon: 'language',
+},
+{
+    title: 'Discussion',
+    route: '',
+    icon: 'home',
 },
 {
     title: 'Get to Work',
     route: '/market',
     icon: 'assignment',
+}, {
+    title: 'Giveaway',
+    route: '/charity',
+    icon: 'laptop_mac',
+}, {
+    title: 'Quick Buy',
+    route: '/buy',
+    icon: 'language',
 },
 {
     title: 'Market Place',
