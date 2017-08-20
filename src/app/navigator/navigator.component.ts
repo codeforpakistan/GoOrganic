@@ -84,7 +84,7 @@ export class NavigatorComponent implements OnInit {
     this.showScrollTopBtn = false;
   }
   ngOnInit(): void {
-    this._titleService.setTitle( 'Go Organic' );
+    this._titleService.setTitle( 'Use Your Hobby' );
 
     var d = new Date();
     this.copyrightYear = d.getFullYear();

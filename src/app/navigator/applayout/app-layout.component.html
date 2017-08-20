@@ -1,8 +1,20 @@
-  <td-layout-nav color="green">
-    <div td-toolbar-content layout="row" layout-align="center center" flex>
-      <img class="appLogo" src="../../../assets/images/asd_logo.png">
-      <span flex style="color: #FFF">Go Organic</span>
-      <span hide show-gt-md class="asd-label" style="font-size: 13px; position: absolute; right: 0px;">
-    </span>
-    </div>
-  </td-layout-nav>
+<td-layout-nav color="green">
+  <div td-toolbar-content layout="row" layout-align="center center" flex>
+    <img class="appLogo" src="../../../assets/images/asd_logo.png"> 
+    <span flex style="color: #FFF">No Hunger & No Poverty Through Gardening Hobby</span>
+    <span hide show-gt-md class="asd-label" style="font-size: 13px; position: absolute; right: 0px;">
+  </span>
+  <md-toolbar class="pad-none green-navigation">
+    <nav md-stretch-tabs md-tab-nav-bar class="pull-bottom-xl pull-top-md text-upper" flex>
+      <a md-tab-link *ngFor="let routeLink of routes; 
+      let i = index"
+       [routerLink]="routeLink.route"
+        [active]="activeLinkIndex === i"
+        (click)="activeLinkIndex = i">
+           {{routeLink.title}}
+       </a>
+    </nav>
+  </md-toolbar>
+  </div>
+  <ng-content></ng-content>
+</td-layout-nav>

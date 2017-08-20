@@ -21,7 +21,6 @@ td-layout-manage-list .mat-toolbar {
     padding: 0 !important;
 }
 .mat-green{
-    height: 100px !important;
     background-color: #6AA451 !important;
 }
 
@@ -38,13 +37,18 @@ td-layout-manage-list .mat-toolbar {
     user-select: none;
 }
 .appLogo{
-    width: 5%;
+    width: 2%;
     margin-right: 10px;
-    margin-left: 10px
 }
-.mat-toolbar-layout{
-    margin-top: 15px;
-}
+// .mat-toolbar-layout{
+//     margin-top: 15px;
+// }
 .td-menu-button{
     display: none !important;
+}
+.mat-toolbar{
+    box-shadow: none;
+}
+.mat-tab-link{
+    color: #FFF !important;
 }

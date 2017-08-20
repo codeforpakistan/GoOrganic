@@ -12,7 +12,7 @@ import { DetailComponent } from './detail/detail.component';
 import { LoginComponent } from './login/login.component';
 import { FormComponent } from './form/form.component';
 import { NavigatorComponent } from './navigator/navigator.component';
-import { ProjectListingComponent } from './navigator/dashboard/projects-listing.componet';
+import { LandingPageComponet } from './navigator/landingPage.component';
 
 const routes: Routes = [
     {
@@ -20,12 +20,20 @@ const routes: Routes = [
         component: MainComponent,
         children: [
             {
-                component: NavigatorComponent,
+                component: LandingPageComponet,
                 path: '',
             },
             {
-                component: ProjectListingComponent,
-                path: 'dashboard',
+                component: LandingPageComponet,
+                path: 'charity',
+            },
+            {
+                component: LandingPageComponet,
+                path: 'buy',
+            },
+            {
+                component: LandingPageComponet,
+                path: 'market',
             }
         ]
     }

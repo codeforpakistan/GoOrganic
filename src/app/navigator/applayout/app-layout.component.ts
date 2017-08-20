@@ -7,4 +7,23 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./app-layout.component.scss'],
 })
 export class AppLayoutComponent {
+  routes: Object[] = [{
+    title: 'Home',
+    route: '',
+    icon: 'home',
+}, {
+    title: 'End Hunger',
+    route: '/charity',
+    icon: 'laptop_mac',
+}, {
+    title: 'End Poverty',
+    route: '/buy',
+    icon: 'language',
+},
+{
+    title: 'Get to Work',
+    route: '/market',
+    icon: 'assignment',
+}
+];
 }

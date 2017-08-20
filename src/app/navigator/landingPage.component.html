@@ -1,0 +1,12 @@
+<app-layout >
+  <!-- router outlet goes here -->
+            <div *ngFor="let svg of svgs">
+              <img *ngFor="let background of svg.backgroundSvg"
+              [src]="sanitizer.bypassSecurityTrustResourceUrl(background)"
+              [class.show]="svg.active" class="step"
+              />
+              <img
+              [src]="sanitizer.bypassSecurityTrustResourceUrl(svg.data)"
+              [class.show]="svg.active" class="step" />
+            </div>
+</app-layout>

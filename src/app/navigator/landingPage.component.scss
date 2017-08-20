@@ -1,0 +1,18 @@
+.show {
+  transition: .5s ease-out all;
+  opacity: 1 !important;
+}
+
+.step {
+  opacity: 0;
+  position: absolute;
+//   width: 100%;
+//   height: 100%;
+}
+
+.svgContainer{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+

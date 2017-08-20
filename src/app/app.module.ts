@@ -44,13 +44,13 @@ import { DataCollectionService } from './navigator/shared/services/data-collecti
 import { SendRequestInterceptor } from '../config/interceptors/send-request.interceptor'
 import { SendRequestService } from './navigator/shared/services/send-request.service'
 import { FiltersDataService } from './navigator/shared/services/filters-data.service'
-import { ProjectListingComponent } from './navigator/dashboard/projects-listing.componet'
 
 import { LoaderService } from './navigator/shared/services/loader.service'
 import { AppLayoutComponent } from './navigator/applayout/app-layout.component'
 
 import { DirCrudComponent } from './navigator/dir-crud/dir-crud.component';
 import { DimensionsListComponent } from './navigator/dir-crud/dimensions-list/dimensions-list.component';
+import { LandingPageComponet } from './navigator/landingPage.component';
 
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
@@ -85,8 +85,8 @@ export function getAPI(): string {
     MaturityScaleComponent,
     DirCrudComponent,
     DimensionsListComponent,
-    ProjectListingComponent,
-    AppLayoutComponent
+    AppLayoutComponent,
+    LandingPageComponet
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     AppRoutingModule,
