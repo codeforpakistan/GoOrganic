@@ -2,28 +2,33 @@
   <md-card-content style="display: inline-block">
     <span layout="row">
       <span flex>
-        <img src="../../../assets/images/cherry.png" height="80" width="80" style="float:left">
+        <img src="../../../assets/images/k3.jpg"  height="250" width="300" style="float:left">
       </span>
-      <p flex style="font-size: 18px">{{usecaseObj.title}}</p>
     </span>
-    <span layout="row">
+
+    <span layout="row" style="margin-top:5px;">
+      <span flex class="multiline-ellipsis">
+       {{usecaseObj.title}}
+      </span>
+    </span>
+    <span layout="row" style="margin-top:5px;">
       <span flex class="multiline-ellipsis">
         {{usecaseObj.description}}
       </span>
     </span>
-    <span layout="row" style="margin-top: 10px">
+    <!--<span layout="row" style="margin-top: 10px">
       <span flex>
           <strong>Posted By:</strong> {{usecaseObj.posted_by}}
       </span>
-    </span>
-    <span layout="row">
+    </span>-->
+    <span layout="row" style="margin-top:10px;">
       <span flex>
-          <strong>Timeline available:</strong> {{usecaseObj.timeline_available}}
+          <strong>Item Available:</strong> {{usecaseObj.timeline_available}}
       </span>
     </span>
-    <span layout="row">
+    <span layout="row" style="margin-top:5px;">
       <span flex>
-          <strong>Price:</strong> {{usecaseObj.price}}
+          <strong>Price:</strong> {{usecaseObj.price}} Rs.
       </span>
     </span>
     <!--<span layout="row" class="view-details-section">

@@ -4,10 +4,10 @@
             <div flex>
                 <dimension-checklist #in [bgColor]="'#6AA451'" [checklistId]="1" [heading]="'CATEGORIES'" [scrollbarClassName]="'industries-scrollbar-content'" [searchboxClassName]="'industries-searchbox'" [dimensions]="industries" [checkboxClassName]="'bvf-indus-checkbox'" (resetSearchTriggered)="handleResetSearch()"></dimension-checklist>
             </div>
-            <!--<div flex>
-                <dimension-checklist #bf [bgColor]="'#EF6C00'" [checklistId]="2" [heading]="'BUSINESS FUNCTIONS'" [scrollbarClassName]="'bf-scrollbar-content'" [searchboxClassName]="'bf-searchbox'" [dimensions]="businessFunctions" [checkboxClassName]="'bvf-bf-checkbox'" (resetSearchTriggered)="handleResetSearch()"></dimension-checklist>
-            </div>
             <div flex>
+                <dimension-checklist #bf [bgColor]="'#6AA451'" [checklistId]="2" [heading]="'PRICE'" [scrollbarClassName]="'bf-scrollbar-content'" [searchboxClassName]="'bf-searchbox'" [dimensions]="businessFunctions" [checkboxClassName]="'bvf-bf-checkbox'" (resetSearchTriggered)="handleResetSearch()"></dimension-checklist>
+            </div>
+            <!--<div flex>
                 <dimension-checklist #fi [bgColor]="'#6EC9CE'" [checklistId]="3" [heading]="'FUNCTIONAL INSIGHTS'" [scrollbarClassName]="'fi-scrollbar-content'" [searchboxClassName]="'fi-searchbox'"[dimensions]="functionalInsights" [checkboxClassName]="'bvf-fi-checkbox'" (resetSearchTriggered)="handleResetSearch()"></dimension-checklist>    
             </div>
             <div flex>
@@ -21,8 +21,8 @@
         </div>-->
         <div layout="column" layout-padding class="bvf-filters-btn-area">
             <div flex>
-                <button md-raised-button class="bvf-view-btn" (click)="viewData()">View</button>
-                <button md-raised-button class="bvf-reset-btn" (click)="resetData()">Reset</button>
+                <button md-raised-button class="bvf-view-btn" (click)="viewData()" style="background-color:#99BF51;">View</button>
+                <button md-raised-button class="bvf-reset-btn" (click)="resetData()" style="background-color:white; color:black;">Reset</button>
             </div>
             <!--<span flex [ngClass]="{'bvf-filters-text-ellipsis': isApplied}" style="
                 font-size: 12px;

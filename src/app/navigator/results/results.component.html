@@ -4,11 +4,11 @@
     <div  *ngFor="let usecase of usecases"> 
         <div *ngIf="usecase.businessFunctionName">
             <div class="bvf-usecases-area"  layout="row" layout-wrap>
-                <div layout="row" flex="100" class="bvf-panel">
+                <!--<div layout="row" flex="100" class="bvf-panel">
                     <div class="bvf-bf-label bvf-bf-bg" title="{{usecase.businessFunctionName}}">
                         {{usecase.businessFunctionName}}
                     </div>
-                </div>
+                </div>-->
                 <div layout="row" flex="100">
                     <span  class="bvf-collapse-btn" (click)="usecase.showPanel = !usecase.showPanel">
                         <a *ngIf="!usecase.showPanel">
@@ -89,7 +89,7 @@
                         </a>
                     </span>
                 </div>
-                <div *ngIf="usecase.showPanel" layout-gt-sm="row" layout="column" layout-wrap style="padding-top: 15px">
+                <div *ngIf="usecase.showPanel" layout-gt-sm="row" layout="column" layout-wrap style="padding-top: 15px; margin-left:50px">
                     <div hide show-gt-md *ngFor="let businessFunction of usecase.businessFunctionList; trackBy:usecase?.id" class="bvf-usecase-item">
                         <use-case [usecaseObj]="businessFunction"></use-case>
                     </div>
