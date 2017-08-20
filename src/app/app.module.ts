@@ -96,8 +96,8 @@ export function getAPI(): string {
     DirCrudComponent,
     DimensionsListComponent,
     AppLayoutComponent,
-    LandingPageComponet,
     NearBySearchComponent,
+    LandingPageComponet,
     EndHungerComponent,
     EndPovertyComponent
   ], // directives, components, and pipes owned by this NgModule
