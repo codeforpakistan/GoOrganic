@@ -17,7 +17,7 @@
                 <div *ngIf="showNoLocationMsg">
                     No Location Found.
                 </div>
-                <div *ngIf="search.value">
+                <div *ngIf="search.value" style="position: absolute; " class="location-suggestions">
                     <div class="location-item" (click)="selectLocation(f)" *ngFor="let f of filteredLocations">
                         {{f}}
                     </div>
@@ -30,6 +30,11 @@
                 <button md-button class="search-btn" (click)="searchLoc()"> Search </button>
             </div>
         </div>
+
+        <div layout="row" *ngIf="!showResult">
+            <img style="width:100%; height: 40%" src="../../assets/images/main-map.PNG">
+        </div>
+
         <div layout="row" *ngIf="searchbarType == 'products' && showResult">
             <div flex>
                 <md-card layout="row">
