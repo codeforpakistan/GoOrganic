@@ -30,6 +30,8 @@ export class NearBySearchComponent implements OnInit {
     mode = 'determinate';
     bufferValue = 75;
 
+    searchInputTerm: string;
+
     @Input() searchbarType: string;
 
     ngOnInit(): void {
@@ -47,4 +49,6 @@ export class NearBySearchComponent implements OnInit {
             return this.stringsModel ? this.stringsModel.indexOf(filteredItem) < 0 : true;
         });
     }
+
+
 }

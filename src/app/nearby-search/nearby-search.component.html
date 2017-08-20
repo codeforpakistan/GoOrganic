@@ -13,13 +13,13 @@
                 </td-chips>
             </div>
             <div flex="90" *ngIf="searchbarType == 'user'">
-                
+                <td-search-input backIcon="arrow_back" placeholder="Search here" [showUnderline]="false" [debounce]="500" (searchDebounce)="searchInputTerm = $event" (search)="searchInputTerm = $event" (clear)="searchInputTerm = ''"></td-search-input>
             </div>
             <div flex="10" class="search-btn-area">
                 <button md-button class="search-btn" (click)="showResult = true"> Search </button>
             </div>
         </div>
-        <div layout="row" *ngIf="showResult">
+        <div layout="row" *ngIf="searchbarType == 'products' && showResult">
             <div flex>
                 <md-card layout="row">
                     <md-card-content flex>
@@ -30,14 +30,17 @@
                                         <img class="thumb-grower-img" src="../../assets/images/male.png">
                                     </div>    
                                     <div flex="80">
-                                        <div>
+                                        <div class="grower-info">
                                             <strong>Grower Name:</strong>John Doe 
                                         </div>
-                                        <div>
+                                        <div class="grower-info">
                                             <strong>Location:</strong>South Punjab, Abc  
                                         </div>
-                                        <div>
+                                        <div class="grower-info">
                                             <strong>Contact Number:</strong> 0333-5454980  
+                                        </div>
+                                        <div class="grower-info">
+                                            <strong>Distance:</strong> 10 miles away  
                                         </div>
                                     </div>
                                 </div>
@@ -96,6 +99,148 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+        </div>
+        <div layout="row" *ngIf="searchbarType == 'user' && showResult" layout-wrap>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Grower Name:</strong>John Doe 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>South Punjab, Abc  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-5454980  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 10 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Grower Name:</strong>John Doe 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>South Punjab, Abc  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-5454980  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 10 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Grower Name:</strong>John Doe 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>South Punjab, Abc  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-5454980  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 10 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Grower Name:</strong>John Doe 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>South Punjab, Abc  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-5454980  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 10 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Grower Name:</strong>John Doe 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>South Punjab, Abc  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-5454980  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 10 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
                         </div>
                     </md-card-content>
                 </md-card>
