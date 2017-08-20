@@ -12,7 +12,7 @@
                     requireMatch>
                 </td-chips>
             </div>
-            <div flex="90" *ngIf="searchbarType == 'user'">
+            <div flex="90" *ngIf="searchbarType == 'user' || searchbarType == 'kit'">
                 <td-search-input #search backIcon="arrow_back" placeholder="Search location here" [showUnderline]="false" [debounce]="500" (searchDebounce)="filterLocations($event)" (search)="doSearch($event)" (clear)="clear()"></td-search-input>
                 <div *ngIf="showNoLocationMsg">
                     No Location Found.
@@ -26,7 +26,7 @@
             <div flex="10" *ngIf="searchbarType == 'products'" class="search-btn-area">
                 <button md-button class="search-btn" (click)="showResult = true"> Search </button>
             </div>
-            <div flex="10" *ngIf="searchbarType == 'user'" class="search-btn-area">
+            <div flex="10" *ngIf="searchbarType == 'user' || searchbarType == 'kit'" class="search-btn-area">
                 <button md-button class="search-btn" (click)="searchLoc()"> Search </button>
             </div>
         </div>
@@ -243,6 +243,150 @@
                             <div flex="80">
                                 <div class="grower-info">
                                     <strong>Volunteer Name:</strong>Gohar Sharif 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>{{selectedLocation}} 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-9090977 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 5 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+        </div>
+
+
+        <div layout="row" *ngIf="searchbarType == 'kit' && showResult" layout-wrap>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Kit Owner Name:</strong>Ahmed Hassan 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>{{selectedLocation}}  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-5544667 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 10 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Kit Owner Name:</strong>Ahmed Fawad 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>{{selectedLocation}} 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-9898767  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 8 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Kit Owner Name:</strong>Rohaan Ishfaq 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>{{selectedLocation}} 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-5498980  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 9 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Kit Owner Name:</strong>Usman Azam
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Location:</strong>{{selectedLocation}}  
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Contact Number:</strong> 0333-57676899 
+                                </div>
+                                <div class="grower-info">
+                                    <strong>Distance:</strong> 6 miles away  
+                                </div>
+                            </div>
+                        </div>
+                        <div layout="row" class="searched-item-imgs">
+                            <img class="map-image" src="../../assets/images/map.gif">
+                        </div>
+                    </md-card-content>
+                </md-card>
+            </div>
+            <div flex="33">
+                <md-card>
+                    <md-card-content>
+                        <div layout="row">
+                            <div flex="20">
+                                <img class="thumb-grower-img" src="../../assets/images/male.png">
+                            </div>    
+                            <div flex="80">
+                                <div class="grower-info">
+                                    <strong>Kit Owner Name:</strong>Gohar Sharif 
                                 </div>
                                 <div class="grower-info">
                                     <strong>Location:</strong>{{selectedLocation}} 

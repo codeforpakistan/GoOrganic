@@ -14,6 +14,7 @@ import { NavigatorComponent } from './navigator/navigator.component';
 import { LandingPageComponet } from './navigator/landingPage.component';
 import { EndHungerComponent } from './end-hunger/end-hunger.component';
 import { EndPovertyComponent } from './end-poverty/end-poverty.component';
+import { GetToWorkComponent } from './get-to-work/get-to-work.component';
 
 const routes: Routes = [
     {
@@ -33,7 +34,7 @@ const routes: Routes = [
                 path: 'buy',
             },
             {
-                component: LandingPageComponet,
+                component: GetToWorkComponent,
                 path: 'market',
             }
         ]
@@ -108,5 +109,5 @@ export const routedComponents: any[] = [
     DashboardProductComponent,
     FormComponent, DetailComponent,
     FeaturesFormComponent, ProductFeaturesComponent, ProductOverviewComponent, ProductStatsComponent,
-    NavigatorComponent, EndHungerComponent, EndPovertyComponent
+    NavigatorComponent, EndHungerComponent, EndPovertyComponent, GetToWorkComponent
 ];

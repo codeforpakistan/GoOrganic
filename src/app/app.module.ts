@@ -62,6 +62,8 @@ import { EndHungerComponent } from './end-hunger/end-hunger.component';
 
 import { EndPovertyComponent } from './end-poverty/end-poverty.component';
 
+import { GetToWorkComponent } from './get-to-work/get-to-work.component';
+
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
   SendRequestInterceptor
@@ -99,7 +101,8 @@ export function getAPI(): string {
     NearBySearchComponent,
     LandingPageComponet,
     EndHungerComponent,
-    EndPovertyComponent
+    EndPovertyComponent,
+    GetToWorkComponent
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     AppRoutingModule,
