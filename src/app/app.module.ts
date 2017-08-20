@@ -56,6 +56,10 @@ import { CovalentChipsModule } from '@covalent/core';
 
 import {MdProgressBarModule} from '@angular/material';
 
+import { EndHungerComponent } from './end-hunger/end-hunger.component';
+
+import { EndPovertyComponent } from './end-poverty/end-poverty.component';
+
 const httpInterceptorProviders: Type<any>[] = [
   RequestInterceptor,
   SendRequestInterceptor
@@ -89,7 +93,9 @@ export function getAPI(): string {
     MaturityScaleComponent,
     DirCrudComponent,
     DimensionsListComponent,
-    NearBySearchComponent
+    NearBySearchComponent,
+    EndHungerComponent,
+    EndPovertyComponent
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     AppRoutingModule,
