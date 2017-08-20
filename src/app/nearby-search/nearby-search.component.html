@@ -13,10 +13,18 @@
                 </td-chips>
             </div>
             <div flex="90" *ngIf="searchbarType == 'user'">
-                <td-search-input backIcon="arrow_back" placeholder="Search here" [showUnderline]="false" [debounce]="500" (searchDebounce)="searchInputTerm = $event" (search)="searchInputTerm = $event" (clear)="searchInputTerm = ''"></td-search-input>
+                <td-search-input #search backIcon="arrow_back" placeholder="Search location here" [showUnderline]="false" [debounce]="500" (searchDebounce)="filterLocations($event)" (search)="doSearch($event)" (clear)="clear()"></td-search-input>
+                <div *ngIf="showNoLocationMsg">
+                    No Location Found.
+                </div>
+                <div *ngIf="search.value">
+                    <div class="location-item" (click)="selectLocation(f)" *ngFor="let f of filteredLocations">
+                        {{f}}
+                    </div>
+                </div>
             </div>
             <div flex="10" class="search-btn-area">
-                <button md-button class="search-btn" (click)="showResult = true"> Search </button>
+                <button md-button class="search-btn" (click)="searchLoc()"> Search </button>
             </div>
         </div>
         <div layout="row" *ngIf="searchbarType == 'products' && showResult">
@@ -34,7 +42,7 @@
                                             <strong>Grower Name:</strong>Usman Azam 
                                         </div>
                                         <div class="grower-info">
-                                            <strong>Location:</strong>South Punjab, Abc  
+                                            <strong>Location:</strong>Chak Shahzad
                                         </div>
                                         <div class="grower-info">
                                             <strong>Contact Number:</strong> 0333-5787889 
@@ -114,10 +122,10 @@
                             </div>    
                             <div flex="80">
                                 <div class="grower-info">
-                                    <strong>Grower Name:</strong>Ahmed Hassan 
+                                    <strong>Volunteer Name:</strong>Ahmed Hassan 
                                 </div>
                                 <div class="grower-info">
-                                    <strong>Location:</strong>South Punjab, Abc  
+                                    <strong>Location:</strong>{{selectedLocation}}  
                                 </div>
                                 <div class="grower-info">
                                     <strong>Contact Number:</strong> 0333-5544667 
@@ -142,10 +150,10 @@
                             </div>    
                             <div flex="80">
                                 <div class="grower-info">
-                                    <strong>Grower Name:</strong>Ahmed Fawad 
+                                    <strong>Volunteer Name:</strong>Ahmed Fawad 
                                 </div>
                                 <div class="grower-info">
-                                    <strong>Location:</strong>South Punjab, Abc  
+                                    <strong>Location:</strong>{{selectedLocation}} 
                                 </div>
                                 <div class="grower-info">
                                     <strong>Contact Number:</strong> 0333-9898767  
@@ -170,10 +178,10 @@
                             </div>    
                             <div flex="80">
                                 <div class="grower-info">
-                                    <strong>Grower Name:</strong>Rohaan Ishfaq 
+                                    <strong>Volunteer Name:</strong>Rohaan Ishfaq 
                                 </div>
                                 <div class="grower-info">
-                                    <strong>Location:</strong>South Punjab, Abc  
+                                    <strong>Location:</strong>{{selectedLocation}} 
                                 </div>
                                 <div class="grower-info">
                                     <strong>Contact Number:</strong> 0333-5498980  
@@ -198,10 +206,10 @@
                             </div>    
                             <div flex="80">
                                 <div class="grower-info">
-                                    <strong>Grower Name:</strong>Usman Azam
+                                    <strong>Volunteer Name:</strong>Usman Azam
                                 </div>
                                 <div class="grower-info">
-                                    <strong>Location:</strong>South Punjab, Abc  
+                                    <strong>Location:</strong>{{selectedLocation}}  
                                 </div>
                                 <div class="grower-info">
                                     <strong>Contact Number:</strong> 0333-57676899 
@@ -226,10 +234,10 @@
                             </div>    
                             <div flex="80">
                                 <div class="grower-info">
-                                    <strong>Grower Name:</strong>Gohar Sharif 
+                                    <strong>Volunteer Name:</strong>Gohar Sharif 
                                 </div>
                                 <div class="grower-info">
-                                    <strong>Location:</strong>South Punjab, Abc  
+                                    <strong>Location:</strong>{{selectedLocation}} 
                                 </div>
                                 <div class="grower-info">
                                     <strong>Contact Number:</strong> 0333-9090977 
