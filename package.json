@@ -38,7 +38,7 @@
   ],
   "dependencies": {
     "@angular/animations": "^4.2.0",
-    "@angular/common": "^4.2.0",
+    "@angular/common": "^20.3.34",
     "@angular/compiler": "^4.2.0",
     "@angular/core": "^4.2.0",
     "@angular/flex-layout": "2.0.0-beta.8",
